@@ -2,28 +2,28 @@
 using namespace std;
 int main()
 {
-    int p,i,k,temp;
+    int a,b,c,temp;
     cout<<"How many integers you want to input: ";
-    cin>>p;
-    int arr[p];
+    cin>>a;
+    int arr[a];
     cout<<"Input the integers: ";
-    for(i=0; i<p; i++)
+    for(i=0; i<a; i++)
         cin>>arr[i];
 
-    for(i=0; i<p-1; i++)
+    for(i=0; i<a-1; i++)
     {
-        for(k=0; k<p-i-1; k++)
+        for(c=0; c<a-b-1; c++)
         {
-            if(arr[k]>arr[k+1])
+            if(arr[c]>arr[c+1])
             {
-                temp = arr[k];
-                arr[k] = arr[k+1];
-                arr[k+1] = temp;
+                temp = arr[c];
+                arr[c] = arr[c+1];
+                arr[c+1] = temp;
             }
         }
     }
     cout<<"The sorted array: ";
-    for(i=0; i<p; i++)
+    for(i=0; i<a; i++)
         cout<<arr[i]<<" ";
     cout<<endl;
     return 0;
